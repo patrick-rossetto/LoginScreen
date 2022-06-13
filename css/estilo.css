@@ -1,0 +1,108 @@
+
+@font-face {
+    font-family: "Arista Pro bold";
+    src: url("../fonts/Arista-Pro-Light-trial.ttf");
+    src: url("../fonts/Arista-Pro-bold-trial.ttf");
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-transform: uppercase;
+    font-family: Arista Pro bold; 
+    font-size: 32px;
+    border-radius: 5px;
+
+
+}
+body{
+    font-size: 102px;
+    background-color: #132746;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    
+}
+form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 30%;
+    height: 40%;
+}
+input{
+    color:#FCFCFF;
+    padding: 5px;
+    width: 100%;
+    background-color: #132746;
+    border: 2px solid #00000055;
+    border-radius: inherit;
+    outline: none;
+    font-size: 2rem;
+    transition: 0.5s;
+}
+div{
+    position: relative;
+}
+label{
+    color: #00000055;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    padding: 5px;
+    font-size: 2rem;
+    transition: 0.5s
+}
+
+input:valid, input:focus{
+    border-radius: 0px 5px 5px 5px;
+    border: 2px solid #FCFCFF;
+}
+input:valid ~ label,
+input:focus ~ label{
+    color:#FCFCFF;
+    transform: translateX(0px) translateY(-30px);
+    font-size: 0.70rem;
+    border-radius: 5px 5px 0px 0px;
+    border-left: 2px solid #FCFCFF;
+    border-top: 2px solid #FCFCFF;
+    border-right: 2px solid #FCFCFF;
+}
+button{
+    color: #00000055;
+    background-color: #132746;
+    border: 2px solid #00000055;
+    padding: 5px;
+    border-radius: inherit;
+    width: 22%;
+    transition: 0.5s;
+    visibility: hidden;
+}
+button:hover{
+    color:#FCFCFF;
+    width: 25%;
+    border: 2px solid #FCFCFF;
+    letter-spacing: 2px;
+    animation: brilha 2s linear infinite;
+}
+
+@keyframes brilha{
+    0%{
+        box-shadow: 0px 0px 10px #FCFCFF;
+        
+    }
+    50%{
+        box-shadow: 0px 0px 40px #FCFCFF;
+    }
+    100%{
+        box-shadow: 0px 0px 10px #FCFCFF;
+    }
+}
+

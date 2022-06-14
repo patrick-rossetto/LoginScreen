@@ -1,7 +1,6 @@
 
 @font-face {
     font-family: "Arista Pro bold";
-    src: url("../fonts/Arista-Pro-Light-trial.ttf");
     src: url("../fonts/Arista-Pro-bold-trial.ttf");
 }
 
@@ -37,6 +36,7 @@ form{
     width: 30%;
     height: 40%;
 }
+    
 input{
     color:#FCFCFF;
     padding: 5px;
@@ -68,41 +68,292 @@ input:valid, input:focus{
 input:valid ~ label,
 input:focus ~ label{
     color:#FCFCFF;
-    transform: translateX(0px) translateY(-30px);
+    background-color: #132746;
+    transform: translateX(0px) translateY(-32px);
     font-size: 0.70rem;
     border-radius: 5px 5px 0px 0px;
-    border-left: 2px solid #FCFCFF;
-    border-top: 2px solid #FCFCFF;
-    border-right: 2px solid #FCFCFF;
+    border: 2px solid #FCFCFF;
+    animation: changebox 4s forwards;
+    
 }
 button{
     color: #00000055;
     background-color: #132746;
     border: 2px solid #00000055;
     padding: 5px;
+    font-size: 100%;
     border-radius: inherit;
     width: 22%;
-    transition: 0.5s;
+    transition: 0.8s;
     visibility: hidden;
 }
 button:hover{
-    color:#FCFCFF;
+    color: #132746;;
+    background-color:#FCFCFF;
     width: 25%;
     border: 2px solid #FCFCFF;
     letter-spacing: 2px;
-    animation: brilha 2s linear infinite;
+    animation: brilha 3.5s linear infinite;
 }
 
 @keyframes brilha{
     0%{
         box-shadow: 0px 0px 10px #FCFCFF;
+
         
     }
     50%{
-        box-shadow: 0px 0px 40px #FCFCFF;
+        box-shadow: 0px 0px 25px #FCFCFF;
+        
     }
     100%{
         box-shadow: 0px 0px 10px #FCFCFF;
+        
     }
 }
 
+@keyframes brilhaMedia{
+    0%{
+        box-shadow: 0px 0px 25px #FCFCFF;
+
+        
+    }
+    50%{
+        box-shadow: 0px 0px 50px #FCFCFF;
+        
+    }
+    100%{
+        box-shadow: 0px 0px 25px #FCFCFF;
+        
+    }
+}
+@keyframes brilhaMedia2{
+    0%{
+        box-shadow: 0px 0px 45px #FCFCFF;
+
+        
+    }
+    50%{
+        box-shadow: 0px 0px 100px #FCFCFF;
+        
+    }
+    100%{
+        box-shadow: 0px 0px 45px #FCFCFF;
+        
+    }
+}
+
+@keyframes changebox{
+    0%{
+        color:#FCFCFF;
+        background-color: #132746;
+    }
+    100%{
+        color:#132746;
+        background-color: #FCFCFF;
+    }
+}
+
+/* "responsividade" só pra screen*/
+@media only screen and (max-width: 8000px) and (min-width: 6001px){
+    form{
+        gap: 220px;
+    }
+    input{
+        font-size: 11rem;
+    }
+    
+    label{
+        font-size: 11rem;
+    }
+    input:valid ~ label,
+    input:focus ~ label{
+        font-size: 5.7rem;
+        transform: translateX(0px) translateY(-172px);
+    }
+    button{
+        width: 38%;
+        font-size: 650%;
+    }
+    button:hover{
+        letter-spacing: 12px;
+        width: 43%;
+        animation: brilhaMedia2 3.5s linear infinite;
+    }
+}
+@media only screen and (max-width: 6000px) and (min-width: 4001px){
+    form{
+        gap: 160px;
+    }
+    input{
+        font-size: 7rem;
+    }
+    
+    label{
+        font-size: 7rem;
+    }
+    input:valid ~ label,
+    input:focus ~ label{
+        font-size: 3.7rem;
+        transform: translateX(0px) translateY(-116px);
+    }
+    button{
+        width: 40%;
+        font-size: 550%;
+    }
+    button:hover{
+        width: 45%;
+        letter-spacing: 8px;
+        animation: brilhaMedia 3.5s linear infinite;
+    }
+}
+@media only screen and (max-width: 4000px) and (min-width: 3700px){
+    form{
+        gap: 100px;
+    }
+    input{
+        font-size: 5rem;
+    }
+    
+    label{
+        font-size: 5rem;
+    }
+    input:valid ~ label,
+    input:focus ~ label{
+        font-size: 2.7rem;
+        transform: translateX(0px) translateY(-86px);
+    }
+    button{
+        width: 40%;
+        font-size: 350%;
+    }
+    button:hover{
+        width: 45%;
+        animation: brilhaMedia 3.5s linear infinite;
+    }
+}
+@media only screen and (max-width: 2900px) and (min-width: 2500px){
+    form{
+        gap: 70px;
+    }
+    input{
+        font-size: 2.5rem;
+    }
+    label{
+        
+        font-size: 2.5rem;
+    }
+    input:valid ~ label,
+    input:focus ~ label{
+        font-size: 1.5rem;
+        transform: translateX(0px) translateY(-52px);
+    }
+    button{
+        width: 25%;
+        font-size: 150%;
+    }
+    button:hover{
+        width: 28%;
+    }
+
+}
+
+@media only screen and (max-width: 1730px){
+    button{
+        font-size: 80%;
+    }
+}
+
+@media only screen and (max-width: 1510px){
+    button{
+        font-size: 70%;
+    }
+}
+@media only screen and (max-width: 1260px){
+    button{
+        font-size: 60%;
+    }
+}
+@media only screen and (max-width: 1100px){
+    button{
+        font-size: 50%;
+    }
+}
+@media only screen and (max-width: 1000px){
+    form{
+        width: 36%;
+    }
+    button{
+        font-size: 45%;
+    }
+}
+@media only screen and (max-width: 800px){
+    form{
+        width: 40%;
+    }
+    button{
+        width: 30%;
+        font-size: 55%;
+    }
+    button:hover{
+        width: 35%;
+    }
+    input{
+        font-size: 1.3rem;
+    }
+    label{
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (max-width: 700px){
+    form{
+        width: 40%;
+    }
+    input{
+        font-size: 1rem;
+    }
+    label{
+        font-size: 1rem;
+    }
+    input:valid ~ label,
+    input:focus ~ label{
+        font-size: 0.5rem;
+        transform: translateX(0px) translateY(-26px);
+    }
+    form{
+        gap:35px
+    }
+    button{
+        width: 30%;
+        font-size: 50%;
+    }
+    button:hover{
+        width: 35%;
+    }
+}
+@media only screen and (max-width: 500px) and (max-height: 300px){
+    form{
+        gap:25px;
+        width: 70%;
+    }
+    input{
+        font-size: 0.5rem;
+    }
+    label{
+        
+        font-size: 0.8rem;
+    }
+    input:valid ~ label,
+    input:focus ~ label{
+        font-size: 0.25rem;
+        transform: translateX(0px) translateY(-16px);
+    }
+    button{
+        width: 30%;
+        font-size: 50%;
+    }
+    button:hover{
+        width: 35%;
+    }
+
+}

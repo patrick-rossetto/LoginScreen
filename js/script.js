@@ -21,5 +21,5 @@ form.onkeyup = () =>{ //verifica
 
 btn.onclick = e =>{
     e.preventDefault()
-    window.alert(`Você entrou com o usuario:${usuario.value} e a senha${senha.value}`)
+    window.alert(`Foi digitado o usuario: ${usuario.value} e a senha: ${senha.value}`)
 }

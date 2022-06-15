@@ -1,7 +1,7 @@
-const btn = document.querySelector('.botao')
-const usuario = document.querySelector('[type=text]')
-const senha = document.querySelector('[type=password]')
-const form = document.querySelector('.login')
+const btn = document.querySelector('#botao')
+const usuario = document.querySelector('#txtUsuario')
+const senha = document.querySelector('#txtSenha')
+const form = document.querySelector('#formLogin')
 
 function verificadora(input, input2){
     var preenchido = false
